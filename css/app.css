@@ -82,6 +82,10 @@ h1 {
 .deck .card.show {
   font-size: 33px;
 }
+/* Disable Method that disables the reclicking of the images */
+.disabled{
+  pointer-events:none;
+}
 
 /*styles for matched cards*/
 .deck .card.match {
