@@ -23,10 +23,7 @@ function showcard() {
   clickedlist.push(this)
   if (clickedlist.length == 2) {
     match()
-    console.log("before");
     moveincrement()
-    console.log("after");
-
   }
 }
 //Shuffling the cards in the deck
@@ -49,7 +46,7 @@ function match() {
       var killId = setTimeout(function() {
         for (var i = killId; i > 0; i--) clearInterval(i)
       }, 1000);
-      over()
+      setTimeout(over,1000)
     }
     clickedlist = []
   } else {
@@ -91,15 +88,15 @@ var rate = 3;
 //function that calculate the rating based on moves
 function starRating() {
   console.log("rating");
-  if (moves == 5) {
+  if (moves == 8) {
     stars[2].classList.add('fa-star-o');
     stars[2].classList.remove('fa-star');
     rate = rate - 1;
-  } else if (moves == 10) {
+  } else if (moves == 15) {
     stars[1].classList.add('fa-star-o');
     stars[1].classList.remove('fa-star');
     rate = rate - 1;
-  } else if (moves >= 15) {
+  } else if (moves >= 16) {
     rate = 1;
   }
 }
